@@ -15,7 +15,7 @@ clf = pickle.load(open(filename, 'rb'))
 vectorizer = pickle.load(open('tranform.pkl','rb'))
 
 def create_similarity():
-    data = pd.read_csv('main_data.csv')
+    data = pd.read_csv('datasets\main_data_2020.csv')
     # creating a count matrix
     cv = CountVectorizer()
     count_matrix = cv.fit_transform(data['comb'])
@@ -51,7 +51,7 @@ def convert_to_list(my_list):
     return my_list
 
 def get_suggestions():
-    data = pd.read_csv('main_data.csv')
+    data = pd.read_csv('datasets\main_data_2020.csv')
     return list(data['movie_title'].str.capitalize())
 
 app = Flask(__name__)
@@ -129,8 +129,8 @@ def recommend():
     soup = bs.BeautifulSoup(sauce,'lxml')
     soup_result = soup.find_all("div",{"class":"text show-more__control"})
 
-    reviews_list = [] # list of reviews
-    reviews_status = [] # list of comments (good or bad)
+    reviews_list = [] 
+    reviews_status = [] 
     for reviews in soup_result:
         if reviews.string:
             reviews_list.append(reviews.string)
