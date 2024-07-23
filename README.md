@@ -37,7 +37,7 @@ Create an account in https://www.themoviedb.org/, click on the `API` link from t
 4. Open your terminal/command prompt from your project directory and run the file `main.py` by executing the command `python main.py`.
 5. Go to your browser and type `http://127.0.0.1:5000/` in the address bar.
 6. Hurray! That's it.
-7. Also download **credits.csv** from the below given dataset souces
+7. Also download **credits.csv** from the below given dataset sources
 
 ## Architecture
 
